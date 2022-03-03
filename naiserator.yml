@@ -1,7 +1,7 @@
 apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
-  name: pam-matchprofile-searchindex
+  name: pam-matchprofile-index
   namespace: teampam
   labels:
     team: teampam

@@ -1,4 +1,4 @@
-package no.nav.arbeidsplassen.matchprofile.searchindex
+package no.nav.arbeidsplassen.matchprofile.index
 
 import io.micronaut.runtime.Micronaut
 

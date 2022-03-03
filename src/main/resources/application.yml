@@ -1,6 +1,6 @@
 micronaut:
   application:
-    name: pam-matchprofile-searchindex
+    name: pam-matchprofile-index
   server:
     thread-selection: auto
   http:
