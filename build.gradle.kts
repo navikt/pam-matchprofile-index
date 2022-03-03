@@ -17,6 +17,7 @@ val jakartaPersistenceVersion= project.properties["jakartaPersistenceVersion"]
 val postgresqlVersion= project.properties["postgresqlVersion"]
 val tcVersion= project.properties["tcVersion"]
 val javaVersion= project.properties["javaVersion"]
+val openSearchRestClientVersion= project.properties["openSearchRestClientVersion"]
 
 repositories {
     mavenLocal()
@@ -60,7 +61,7 @@ dependencies {
     testImplementation("io.micronaut.test:micronaut-test-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter-engine")
     testImplementation("org.testcontainers:postgresql:${tcVersion}")
-
+    implementation("org.opensearch.client:opensearch-rest-high-level-client:${openSearchRestClientVersion}")
 }
 
 
