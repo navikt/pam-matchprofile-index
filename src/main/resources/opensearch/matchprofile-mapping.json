@@ -1,0 +1,38 @@
+{
+  "date_detection": false,
+  "properties": {
+    "id": {
+      "type":"keyword",
+      "normalizer": "trim_normalizer"
+    },
+    "title": {
+      "type": "text",
+      "index": false
+    },
+    "description": {
+      "type": "text",
+      "index": false
+    },
+    "type": {
+      "type": "keyword"
+    },
+    "uuid": {
+      "type": "keyword"
+    },
+    "created": {
+      "type": "date"
+    },
+    "updated": {
+      "type": "date"
+    },
+    "concepts": {
+      "type": "text",
+      "term_vector": "with_positions_offsets",
+      "analyzer": "norwegian",
+      "copy_to": "concepts_keyword"
+    },
+    "concepts_keyword": {
+      "type": "keyword"
+    }
+  }
+}
