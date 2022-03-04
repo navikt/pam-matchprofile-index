@@ -43,9 +43,11 @@ jackson:
   serialization:
     indentOutput: true
 
-#kafka:
-#  producers:
-#    default:
-#      linger.ms: 5000
-#      batch.size: 65536
+matchprofile:
+  kafka:
+    enabled: true
+    topic: teampam.matchprofile-intern-1
 
+kafka:
+  bootstrap:
+    servers: localhost:9092
