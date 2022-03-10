@@ -5,6 +5,19 @@
       "type":"keyword",
       "normalizer": "trim_normalizer"
     },
+    "orgnr": {
+      "type": "keyword",
+      "normalizer": "trim_normalizer"
+    },
+    "sourceId": {
+      "type": "keyword"
+    },
+    "type": {
+      "type": "keyword"
+    },
+    "status": {
+      "type": "keyword"
+    },
     "title": {
       "type": "text",
       "index": false
@@ -12,18 +25,6 @@
     "description": {
       "type": "text",
       "index": false
-    },
-    "type": {
-      "type": "keyword"
-    },
-    "uuid": {
-      "type": "keyword"
-    },
-    "created": {
-      "type": "date"
-    },
-    "updated": {
-      "type": "date"
     },
     "concepts": {
       "type": "text",
@@ -33,6 +34,15 @@
     },
     "concepts_keyword": {
       "type": "keyword"
-    }
+    },
+    "expires": {
+      "type": "date"
+    },
+    "created": {
+      "type": "date"
+    },
+    "updated": {
+      "type": "date"
+    },
   }
 }

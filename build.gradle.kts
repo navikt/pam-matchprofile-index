@@ -44,8 +44,31 @@ dependencies {
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
     implementation("javax.annotation:javax.annotation-api")
     implementation ("jakarta.persistence:jakarta.persistence-api:${jakartaPersistenceVersion}")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib") {
+        version {
+            strictly("$kotlinVersion")
+        }
+    }
+    implementation("org.jetbrains.kotlin:kotlin-reflect") {
+        version {
+            strictly("$kotlinVersion")
+        }
+    }
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8") {
+        version {
+            strictly("$kotlinVersion")
+        }
+    }
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-common") {
+        version {
+            strictly("$kotlinVersion")
+        }
+    }
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7") {
+        version {
+            strictly("$kotlinVersion")
+        }
+    }
     implementation("io.micronaut.kafka:micronaut-kafka:${micronautKafkaVersion}")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("net.logstash.logback:logstash-logback-encoder:${logbackEncoderVersion}")

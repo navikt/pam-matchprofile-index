@@ -8,8 +8,8 @@ import java.util.*
 @Introspected
 data class MatchProfileDTO (
     var id: String,
-    val owner: String?,
-    val sourceId: String = UUID.randomUUID().toString(),
+    val orgnr: String?,
+    val sourceId: String,
     val type: String,
     val status: String,
     val title: String? = null,
