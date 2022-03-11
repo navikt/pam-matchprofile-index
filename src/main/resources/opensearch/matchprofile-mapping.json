@@ -26,6 +26,18 @@
       "type": "text",
       "index": false
     },
+    "country":{
+      "type": "keyword"
+    },
+    "county":{
+      "type": "keyword"
+    },
+    "municipal":{
+      "type": "keyword"
+    },
+    "city":{
+      "type": "keyword"
+    },
     "concepts": {
       "type": "text",
       "term_vector": "with_positions_offsets",

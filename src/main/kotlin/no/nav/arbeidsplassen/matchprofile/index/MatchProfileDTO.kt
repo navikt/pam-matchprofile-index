@@ -23,7 +23,10 @@ data class MatchProfileDTO (
 )
 
 @Introspected
-data class ProfileDTO(val concepts: Set<ConceptDTO> = hashSetOf())
+data class ProfileDTO(val concepts: Set<ConceptDTO> = hashSetOf(), val locations: List<LocationDTO> = listOf())
+
+@Introspected
+data class LocationDTO(val country: String?, val county: String?, val municipal: String?, val city: String?)
 
 @Introspected
 data class ConceptDTO(val label: String, val cid: Long? = null, val branch: String?, val expandedConcept: String? = null,
