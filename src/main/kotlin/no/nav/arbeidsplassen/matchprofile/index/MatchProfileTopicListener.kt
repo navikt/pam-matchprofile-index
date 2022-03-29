@@ -5,8 +5,6 @@ import io.micronaut.configuration.kafka.annotation.OffsetReset
 import io.micronaut.configuration.kafka.annotation.OffsetStrategy
 import io.micronaut.configuration.kafka.annotation.Topic
 import io.micronaut.context.annotation.Requires
-import no.nav.arbeidsplassen.matchprofile.match.indexer.MatchProfileIndexer
-import no.nav.arbeidsplassen.stihibi.KafkaStateRegistry
 import org.apache.kafka.clients.consumer.Consumer
 import org.slf4j.LoggerFactory
 

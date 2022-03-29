@@ -1,6 +1,5 @@
-package no.nav.arbeidsplassen.matchprofile.match.indexer
+package no.nav.arbeidsplassen.matchprofile.index
 
-import no.nav.arbeidsplassen.matchprofile.index.MatchProfileDTO
 import java.time.Instant
 
 data class MatchProfileDoc(val id: String, val orgnr: String?, val sourceId: String, val type: String, val status: String,

@@ -5,6 +5,7 @@ import io.micronaut.configuration.kafka.exceptions.KafkaListenerException
 import io.micronaut.configuration.kafka.exceptions.KafkaListenerExceptionHandler
 import io.micronaut.context.annotation.Replaces
 import jakarta.inject.Singleton
+import no.nav.arbeidsplassen.matchprofile.index.KafkaStateRegistry
 import org.apache.kafka.clients.consumer.Consumer
 import org.apache.kafka.common.TopicPartition
 import org.apache.kafka.common.errors.SerializationException

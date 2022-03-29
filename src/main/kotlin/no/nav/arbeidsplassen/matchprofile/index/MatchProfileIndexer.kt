@@ -1,9 +1,8 @@
-package no.nav.arbeidsplassen.matchprofile.match.indexer
+package no.nav.arbeidsplassen.matchprofile.index
 
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import jakarta.inject.Singleton
-import no.nav.arbeidsplassen.matchprofile.index.MatchProfileDTO
 import org.opensearch.action.bulk.BulkRequest
 import org.opensearch.action.bulk.BulkResponse
 import org.opensearch.action.index.IndexRequest

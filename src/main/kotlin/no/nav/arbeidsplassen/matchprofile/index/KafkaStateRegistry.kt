@@ -1,4 +1,4 @@
-package no.nav.arbeidsplassen.stihibi
+package no.nav.arbeidsplassen.matchprofile.index
 
 import jakarta.inject.Singleton
 
