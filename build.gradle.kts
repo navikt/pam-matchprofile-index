@@ -18,6 +18,7 @@ val postgresqlVersion= project.properties["postgresqlVersion"]
 val tcVersion= project.properties["tcVersion"]
 val javaVersion= project.properties["javaVersion"]
 val openSearchRestClientVersion= project.properties["openSearchRestClientVersion"]
+val jacksonVersion= project.properties["jacksonVersion"]
 
 repositories {
     mavenLocal()
@@ -73,7 +74,7 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("net.logstash.logback:logstash-logback-encoder:${logbackEncoderVersion}")
     implementation("io.micronaut:micronaut-validation")
-    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin:${jacksonVersion}")
     implementation("io.micronaut.micrometer:micronaut-micrometer-core")
     implementation("io.micronaut.micrometer:micronaut-micrometer-registry-prometheus")
     implementation("io.micronaut:micronaut-management")
