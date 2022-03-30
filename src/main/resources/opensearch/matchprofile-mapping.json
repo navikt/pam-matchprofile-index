@@ -32,7 +32,7 @@
     "county":{
       "type": "keyword"
     },
-    "municipal":{
+    "municipality":{
       "type": "keyword"
     },
     "city":{
