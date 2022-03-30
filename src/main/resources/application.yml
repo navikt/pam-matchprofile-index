@@ -46,7 +46,7 @@ jackson:
 matchprofile:
   kafka:
     enabled: true
-    topic: teampam.matchprofile-intern-1
+    topic: teampam.pam-matchprofile-intern-1
 
 kafka:
   bootstrap:

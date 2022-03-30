@@ -17,7 +17,7 @@ class MatchProfileTopicListener(private val matchProfileIndexer: MatchProfileInd
         private val LOG = LoggerFactory.getLogger(MatchProfileTopicListener::class.java)
     }
 
-    @Topic("\${matchprofile.kafka.topic:teampam.matchprofile-intern-1}")
+    @Topic("\${matchprofile.kafka.topic:teampam.pam-matchprofile-intern-1}")
     fun receive(profiles: List<MatchProfileDTO>, offsets: List<Long>, partitions: List<Int>, topics: List<String>, kafkaconsumer: Consumer<*, *>) {
         LOG.info("Received batch with {} matchprofiles", profiles.size)
         if (kafkaStateRegistry.hasError()) {
