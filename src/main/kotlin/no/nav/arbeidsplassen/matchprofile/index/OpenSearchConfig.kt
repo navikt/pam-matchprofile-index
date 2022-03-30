@@ -11,6 +11,7 @@ import org.apache.http.impl.client.BasicCredentialsProvider
 import org.apache.http.impl.nio.client.HttpAsyncClientBuilder
 import org.opensearch.client.RestClient
 import org.opensearch.client.RestHighLevelClient
+import org.slf4j.LoggerFactory
 import java.security.SecureRandom
 import java.security.cert.X509Certificate
 import javax.net.ssl.SSLContext
@@ -20,7 +21,11 @@ import javax.net.ssl.X509TrustManager
 @Factory
 class OpenSearchConfig(@Value("\${OPEN_SEARCH_USERNAME:admin}") private val user: String,
                        @Value("\${OPEN_SEARCH_PASSWORD:admin}") private val password: String,
-                       @Value("\${OPEN_SEARCH_URI:https://localhost:9200}") private val url: String) {
+                       @Value("\${OPEN_SEARCH_URI:`https://localhost:9200`}") private val url: String) {
+
+    companion object {
+        private val LOG = LoggerFactory.getLogger(OpenSearchConfig::class.java)
+    }
 
     @Singleton
     fun buildOpenSearchClient(): RestHighLevelClient {
@@ -29,10 +34,12 @@ class OpenSearchConfig(@Value("\${OPEN_SEARCH_USERNAME:admin}") private val user
             AuthScope.ANY,
             UsernamePasswordCredentials(user, password)
         )
+        LOG.info("Using url: $url")
         val builder = RestClient.builder(HttpHost.create(url))
             .setHttpClientConfigCallback {
                     httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider)
                 if ("https://localhost:9200" == url && "admin" == password) {
+                    LOG.info("We are using dev/test settings: $url")
                     devAndTestSettings(httpClientBuilder)
                 }
                 httpClientBuilder
