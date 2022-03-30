@@ -90,7 +90,7 @@ dependencies {
 
 
 application {
-    mainClass.set("no.nav.arbeidsplassen.Application")
+    mainClass.set("no.nav.arbeidsplassen.matchprofile.index.Application")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("$javaVersion")
