@@ -48,6 +48,3 @@ matchprofile:
     enabled: true
     topic: teampam.pam-matchprofile-intern-1
 
-kafka:
-  bootstrap:
-    servers: localhost:9092

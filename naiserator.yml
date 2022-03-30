@@ -31,3 +31,5 @@ spec:
   openSearch:
     access: admin
     instance: matchprofile
+  kafka:
+    pool: "{{ kafka_pool }}"

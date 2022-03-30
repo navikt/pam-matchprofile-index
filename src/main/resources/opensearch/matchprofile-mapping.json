@@ -55,6 +55,6 @@
     },
     "updated": {
       "type": "date"
-    },
+    }
   }
 }
