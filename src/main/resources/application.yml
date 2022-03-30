@@ -45,6 +45,6 @@ jackson:
 
 matchprofile:
   kafka:
-    enabled: false
+    enabled: true
     topic: teampam.pam-matchprofile-intern-1
 
