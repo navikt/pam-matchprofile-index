@@ -28,4 +28,6 @@ spec:
   prometheus:
     enabled: true
     path: /internal/prometheus
-
+  openSearch:
+    access: admin
+    instance: matchprofile
