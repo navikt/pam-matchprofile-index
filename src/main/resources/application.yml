@@ -47,4 +47,6 @@ matchprofile:
   kafka:
     enabled: true
     topic: teampam.pam-matchprofile-intern-1
+  index:
+    name: matchprofile-2022
 

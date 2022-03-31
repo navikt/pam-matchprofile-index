@@ -28,7 +28,7 @@ class MatchProfileTopicListener(private val matchProfileIndexer: MatchProfileInd
             val response = matchProfileIndexer.index(profiles)
             if (response.hasFailures()) {
                 LOG.error("We got error while indexing to opensearch ${response.buildFailureMessage()}")
-                LOG.error("failed at start batch offset ${offsets[0]} partition ${partitions[0]}")
+                LOG.error("failed at start batch offset ${offsets[0]} partition ${partitions[0]} topic ${topics[0]}")
                 throw Throwable("Index failed!")
             }
             LOG.info("Index ${profiles.size} successfully , committing offset")
