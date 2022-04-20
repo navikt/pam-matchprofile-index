@@ -39,7 +39,7 @@ class OpenSearchConfig(@Value("\${OPEN_SEARCH_USERNAME:admin}") private val user
             .setHttpClientConfigCallback {
                     httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider)
                 if ("https://localhost:9200" == url && "admin" == password) {
-                    LOG.info("We are using dev/test settings: $url")
+                    LOG.warn("We are using dev/test settings: $url")
                     devAndTestSettings(httpClientBuilder)
                 }
                 httpClientBuilder

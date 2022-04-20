@@ -57,16 +57,17 @@ class MatchProfileIndexer(private val client: RestHighLevelClient,
 
     }
 
-    fun updateAlias(indexName: String): Boolean {
+    fun updateAlias(indexName: String, removePreviousAliases: Boolean = false): Boolean {
         val remove = IndicesAliasesRequest.AliasActions(IndicesAliasesRequest.AliasActions.Type.REMOVE)
             .index("$MATCHPROFILE*")
             .alias(MATCHPROFILE)
         val add = IndicesAliasesRequest.AliasActions(IndicesAliasesRequest.AliasActions.Type.ADD)
             .index(indexName)
             .alias(MATCHPROFILE)
-        val request = IndicesAliasesRequest()
-            .addAliasAction(remove)
-            .addAliasAction(add)
+        val request = IndicesAliasesRequest().apply {
+            if (removePreviousAliases) addAliasAction(remove)
+            addAliasAction(add)
+        }
         LOG.info("updateAlias for alias $MATCHPROFILE and pointing to $indexName ")
         return client.indices().updateAliases(request, RequestOptions.DEFAULT).isAcknowledged
     }

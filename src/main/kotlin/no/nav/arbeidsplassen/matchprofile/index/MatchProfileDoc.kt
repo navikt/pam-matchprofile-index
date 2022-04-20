@@ -8,8 +8,8 @@ data class MatchProfileDoc(val id: String, val orgnr: String?, val sourceId: Str
                            val city: List<String?> = listOf(), val createdBy: String, val updatedBy: String,
                            val expires: Instant, val created: Instant, val updated: Instant)
 
-fun MatchProfileDTO.toDoc() = MatchProfileDoc(id = id, orgnr = orgnr, sourceId = sourceId, type = type, status = status, title = title, description = description,
-    concepts = profile.concepts.map { it.label }, country = profile.locations.map { it.country },
+fun MatchProfileDTO.toDoc() = MatchProfileDoc(id = id, orgnr = orgnr, sourceId = sourceId, type = type, status = status,
+    title = title, description = description, concepts = profile.concepts.map { it.label }, country = profile.locations.map { it.country },
     county = profile.locations.map { it.county }, municipality = profile.locations.map { it.municipality },
     createdBy = createdBy, updatedBy = updatedBy, expires = expires, created = created, updated = updated)
 
