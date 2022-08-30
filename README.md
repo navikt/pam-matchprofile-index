@@ -1,7 +1,6 @@
-pam-matchprofile-index
-================
+## Beskrivelse
 
-`pam-matchprofile-index` henter match-profiler over Kafka og indekserer dem i OpenSearch.
+`pam-matchprofile-index` henter matchprofiler fra pam-matchprofile over Kafka og indekserer dem i OpenSearch.
 
 # Komme i gang
 
